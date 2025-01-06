@@ -8,7 +8,7 @@ if "bg_idx" not in st.session_state:
 
 
 # Streamlit App
-st.title("Car Challenge Generator")
+st.title("Automation Challenge Generator")
 
 description_placeholder = st.empty()
 description_placeholder.text("")
@@ -92,7 +92,7 @@ def correct_indefinite_article(text):
     return " ".join(words)
 
 def build_description(fields):
-    raw_description = (f"It is the year {fields['year']}.\nYou are tasked with designing a {fields['variant']} variant of a {fields['segment']} that is {fields['objective_attribute']} and {fields['subjective_attribute']}.")
+    raw_description = (f"The year is {fields['year']}. \n\n You are tasked with designing a {fields['variant']} variant of a {fields['segment']} that is {fields['objective_attribute']} and {fields['subjective_attribute']}.")
     return correct_indefinite_article(raw_description)
 
 if "fields" not in st.session_state:
