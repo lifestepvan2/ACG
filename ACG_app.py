@@ -50,5 +50,5 @@ if "description" in st.session_state:
         subjective_attribute = random.choice(parent_segment['subjective_attributes'])
         objective_attribute = random.choice(parent_segment['objective_attributes'])
         parts[5] = subjective_attribute
-        parts[7] = objective_attribute
+        parts[6] = objective_attribute
         st.session_state.description = " ".join(parts)
