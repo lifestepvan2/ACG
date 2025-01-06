@@ -3,6 +3,9 @@ import yaml
 import os
 import streamlit as st
 
+description = ""
+    st.write(description)
+
 # Load YAML data from the car_data.yaml file
 def load_yaml_data():
     script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
