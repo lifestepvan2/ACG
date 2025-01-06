@@ -6,45 +6,45 @@ variants:  # List of selectable variants with weighting
   - name: "china-spec"
     weight: 3
   - name: "base-spec"
-    weight: 5
+    weight: 6
   - name: "mid-spec"
-    weight: 8
+    weight: 9
   - name: "upper-spec"
-    weight: 7
+    weight: 8
   - name: "luxury-spec"
-    weight: 4
+    weight: 6
   - name: "hot"
-    weight: 4
+    weight: 5
   - name: "sporty"
-    weight: 3
+    weight: 4
   - name: "allroad"
     weight: 2
   - name: "offroad"
-    weight: 2
+    weight: 3
   - name: "homologation special"
     weight: 2
   - name: "rallye"
     weight: 1
   - name: "rally raid"
     weight: 1
-  - name: "racing"
+  - name: "circuit racing"
     weight: 1
-  - name: "drag racing"
+  - name: "dragster"
     weight: 1
   - name: "police"
-    weight: 2
+    weight: 1
   - name: "taxi"
-    weight: 2
+    weight: 1
   - name: "concept car"
     weight: 1
   - name: "resto-mod"
     weight: 1
   - name: "trackday-tuned"
-    weight: 2
+    weight: 1
   - name: "show-tuned"
     weight: 1
   - name: "utility/transport"
-    weight: 3
+    weight: 2
   - name: "movie car"
     weight: 1
   - name: "getaway car"
@@ -54,7 +54,7 @@ variants:  # List of selectable variants with weighting
   - name: "halo"
     weight: 1
   - name: "eco"
-    weight: 2
+    weight: 3
   - name: "land speed record"
     weight: 1
   - name: "F1 safety car"
@@ -63,9 +63,17 @@ variants:  # List of selectable variants with weighting
     weight: 1
   - name: "open top"
     weight: 3
-  - name: "track only, non-road-legal"
+  - name: "track only, not road-legal"
     weight: 2
-  - name: "hillclimb racing"
+  - name: "hillclimb"
+    weight: 1
+  - name: "hearse"
+    weight: 1  
+  - name: "amphibious"
+    weight: 1
+  - name: "sleeper build"
+    weight: 1
+  - name: "military"
     weight: 1
 
 subsegments:  # Subsegments linked to parent segments
@@ -141,9 +149,10 @@ parent_segments:  # Parent segments with attributes
       - "fun"
       - "outdated"
       - "a deathtrap"
-      - "a shitbox"
+      - "famously unreliable"
       - "a product of communism"
       - "a commercial failure"
+      - "famous for its unique, but troublesome powertrain"
       - "beloved by enthusiasts"
       - "retro"
       - "a popular choice with hipsters"
@@ -158,9 +167,11 @@ parent_segments:  # Parent segments with attributes
       - "practical"
       - "versatile"
       - "durable"
+      - "rear engined"
+      - "naturally aspirated"
       - "low-power"
       - "family-friendly"
-      - "technologically-Advanced"
+      - "technologically advanced"
       - "uncompromised"
       - "a car of the people"
       - "a commercial failure"
@@ -181,9 +192,7 @@ parent_segments:  # Parent segments with attributes
       - "forward-thinking"
       - "sophisticated"
       - "bold"
-      - "understated"
       - "subtle"
-      - "simple"
       - "rugged"
       - "driver-focused"
       - "practical"
@@ -192,13 +201,20 @@ parent_segments:  # Parent segments with attributes
       - "vibrant"
       - "dynamic"
       - "sporty"
-      - "adventurous"
       - "chic"
       - "youthful"
       - "quirky"
       - "fun"
       - "a shitbox"
-      - "a true driver's car"
+      - "a bit of a shitbox"
+      - "a deathtrap"
+      - "a bit of a deathtrap"
+      - "better than its reputation"
+      - "a wolf in sheep's clothing"
+      - "famously unreliable"
+      - "a maintenance nightmare"
+      - "famous for its unique, but troublesome powertrain"
+      - "widely known as the car that doomed its manufacturer"
       - "a car of the people"
       - "a product of communism"
       - "a commercial failure"
@@ -217,6 +233,8 @@ parent_segments:  # Parent segments with attributes
       - "competitively priced"
       - "moderately powerful"
       - "low power"
+      - "rear engined"
+      - "naturally aspirated"
       - "family-friendly"
       - "technologically advanced"
 
@@ -255,10 +273,15 @@ parent_segments:  # Parent segments with attributes
       - "a true driver's car"
       - "a bit of a shitbox"
       - "a car of the people"
+      - "better than its reputation"
+      - "a wolf in sheep's clothing"
       - "designed for seniors"
       - "a product of communism"
       - "a commercial failure"
+      - "famously unreliable"
+      - "a maintenance nightmare"
       - "beloved by enthusiasts"
+      - "widely known as the car that doomed its manufacturer"
       - "retro"
       - "a popular choice with hipsters"
       - "the most stolen vehicle in the UK"
@@ -274,7 +297,7 @@ parent_segments:  # Parent segments with attributes
       - "cargocapable"
       - "durable"
       - "comfortable"
-      - "competitive price-performance-ratio"
+      - "competitively priced"
       - "moderately powerful"
       - "low power"
       - "family friendly"
@@ -303,6 +326,7 @@ parent_segments:  # Parent segments with attributes
       - "understated"
       - "subtle"
       - "simple"
+      - "widely known as the car that doomed its manufacturer"
       - "rugged"
       - "executive"
       - "driver-focused"
@@ -315,11 +339,15 @@ parent_segments:  # Parent segments with attributes
       - "chic"
       - "youthful"
       - "quirky"
+      - "better than its reputation"
+      - "a wolf in sheep's clothing"
       - "fun"
+      - "a maintenance nightmare"
       - "designed for seniors"
       - "a product of communism"
       - "beloved by enthusiasts"
       - "a true driver's car"
+      - "famously unreliable"
       - "a commercial failure"
       - "retro"
       - "a popular choice with hipsters"
@@ -334,22 +362,28 @@ parent_segments:  # Parent segments with attributes
       - "cargo-capable"
       - "durable"
       - "comfortable"
-      - "competitive price performance ratio"
+      - "competitively priced"
       - "moderately powerful"
       - "low-power"
       - "family-friendly"
+      - "high displacement"
       - "spacious"
-      - "technologically-Advanced"
+      - "technologically advanced"
       - "luxurious"
       - "innovative"
+      - "famously unreliable"
+      - "futuristic"
+      - "high displacement"
       - "high-power"
       - "quiet"
       - "cutting edge"
-      - "suitable for winter conditions"      
+      - "suitable for winter conditions"
+      - "famous for its unique, but troublesome powertrain"
+      - "known for being able to outrun any police car of its time"      
   E:  # Executive cars
     subjective_attributes:
       - "stylish"
-      - "oldfashioned"
+      - "old fashioned"
       - "modern"
       - "elegant"
       - "prestigious"
@@ -362,6 +396,7 @@ parent_segments:  # Parent segments with attributes
       - "graceful"
       - "forward-thinking"
       - "sophisticated"
+      - "widely known as the car that doomed its manufacturer"
       - "bold"
       - "understated"
       - "subtle"
@@ -369,9 +404,7 @@ parent_segments:  # Parent segments with attributes
       - "executive"
       - "driver-focused"
       - "practical"
-      - "urban"
       - "smart"
-      - "vibrant"
       - "dynamic"
       - "sporty"
       - "chic"
@@ -381,14 +414,20 @@ parent_segments:  # Parent segments with attributes
       - "a fashion statement"
       - "a menace to society"
       - "designed for seniors"
+      - "a maintenance nightmare"
       - "a product of communism"
       - "beloved by enthusiasts"
       - "a true driver's car"
       - "a commercial failure"
+      - "famously unreliable"
       - "designed to stand out"
       - "retro"
+      - "famously unreliable"
+      - "futuristic"
       - "a popular choice with hipsters"
       - "the most stolen vehicle in the UK"
+      - "famous for its unique, but troublesome powertrain"
+      - "known for being able to outrun any police car of its time"
     objective_attributes:
       - "lightweight"
       - "fuel-efficient"
@@ -397,16 +436,17 @@ parent_segments:  # Parent segments with attributes
       - "cargo-capable"
       - "durable"
       - "comfortable"
-      - "competitive price-performance-ratio"
+      - "competitive priced"
       - "moderately-powerful"
       - "low-power"
       - "family-friendly"
       - "spacious"
-      - "technologically-Advanced"
+      - "technologically advanced"
       - "luxurious"
       - "innovative"
       - "high-power"
       - "silent"
+      - "high displacement"
       - "suitable for winter conditions"
   F:  # Luxury cars
     subjective_attributes:
@@ -420,6 +460,7 @@ parent_segments:  # Parent segments with attributes
       - "exclusive"
       - "elite"
       - "timeless"
+      - "widely known as the car that doomed its manufacturer"
       - "majestic"
       - "opulent"
       - "graceful"
@@ -446,6 +487,7 @@ parent_segments:  # Parent segments with attributes
       - "designed to stand out"
       - "a commercial failure"
       - "retro"
+      - "famous for its unique, but troublesome powertrain"
       - "the most stolen vehicle in the UK"
     objective_attributes:
       - "fuel-efficient"
@@ -457,10 +499,11 @@ parent_segments:  # Parent segments with attributes
       - "moderately-powerful"
       - "family-friendly"
       - "spacious"
-      - "technologically-Advanced"
+      - "technologically advanced"
       - "luxurious"
       - "uncompromised"
       - "high-power"
+      - "high displacement"
       - "silent"
       - "suitable for winter conditions"
       - "innovative"
@@ -481,6 +524,7 @@ parent_segments:  # Parent segments with attributes
       - "graceful"
       - "forward-thinking"
       - "sophisticated"
+      - "widely known as the car that doomed its manufacturer"
       - "bold"
       - "understated"
       - "simple"
@@ -503,10 +547,17 @@ parent_segments:  # Parent segments with attributes
       - "suitable for winter conditions"
       - "beloved by enthusiasts"
       - "a commercial failure"
+      - "high displacement"
       - "designed to stand out"
-      - "banned in the US"
+      - "banned in 22 US states"
+      - "rear engined"
+      - "naturally aspirated"
       - "retro"
+      - "famously unreliable"
+      - "famous for its unique, but troublesome powertrain"
+      - "futuristic"
       - "a popular choice with hipsters"
+      - "famous for its unique, but troublesome powertrain"
       - "the most stolen vehicle in the UK"
     objective_attributes:
       - "lightweight"
@@ -540,6 +591,7 @@ parent_segments:  # Parent segments with attributes
       - "bold"
       - "understated"
       - "subtle"
+      - "widely known as the car that doomed its manufacturer"
       - "simple"
       - "rugged"
       - "executive"
@@ -561,7 +613,10 @@ parent_segments:  # Parent segments with attributes
       - "a product of communism"
       - "suitable for winter conditions"
       - "designed to stand out"
+      - "famous for its unique, but troublesome powertrain"
       - "retro"
+      - "famously unreliable"
+      - "futuristic"
       - "a popular choice with hipsters"
       - "the most stolen vehicle in the UK"
     objective_attributes:
@@ -579,6 +634,7 @@ parent_segments:  # Parent segments with attributes
       - "competitively priced"
       - "moderately powerful"
       - "low-power"
+      - "high displacement"
       - "family-friendly"
       - "spacious"
       - "technologically advanced"
@@ -599,6 +655,7 @@ parent_segments:  # Parent segments with attributes
       - "benchmark"
       - "refined"
       - "exclusive"
+      - "widely known as the car that doomed its manufacturer"
       - "elite"
       - "timeless"
       - "majestic"
@@ -625,11 +682,13 @@ parent_segments:  # Parent segments with attributes
       - "quirky"
       - "fun"
       - "a menace to society"
+      - "high displacement"
       - "a fashion statement"
       - "a symbol of statement"
       - "fit for a king"
       - "a farmer's favourite"
       - "a product of communism"
+      - "famous for its unique, but troublesome powertrain"
       - "free of any electronic aids"
       - "beloved by enthusiasts"
       - "a true driver's car"
@@ -638,6 +697,8 @@ parent_segments:  # Parent segments with attributes
       - "a deathtrap"
       - "designed to stand out"
       - "retro"
+      - "famously unreliable"
+      - "futuristic"
       - "a popular choice with hipsters"
       - "the most stolen vehicle in the UK"
     objective_attributes:
