@@ -81,7 +81,8 @@ def generate_car_description():
         "variant": variant,
         "subjective_attribute": subjective_attribute,
         "objective_attribute": objective_attribute,
-        "segment": segment['name']
+        "segment": segment['name'],
+        "parent_segment": segment['parent']
     }
 
 def correct_indefinite_article(text):
@@ -116,6 +117,7 @@ if st.button("Reroll Variant"):
     description_placeholder.text(description)
 
 if st.button("Reroll Attributes"):
+    parent_segment = st.session_state.fields["parent_segment"]
     st.session_state.fields["subjective_attribute"] = random.choice(parent_segment['subjective_attributes'])
     st.session_state.fields["objective_attribute"] = random.choice(parent_segment['objective_attributes'])
     description = build_description(st.session_state.fields)
