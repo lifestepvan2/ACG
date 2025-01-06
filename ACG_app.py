@@ -20,7 +20,7 @@ def add_bg():
         f"""
         <style>
         .stApp {{
-            background-image: url("./HiResPhoto2_1%2C920-1%2C080.png");
+            background-image: url("https://raw.githubusercontent.com/lifestepvan2/ACG/refs/heads/main/HiResPhoto2_1%2C920-1%2C080.png");
             background-size: cover;
         }}
         </style>
