@@ -2,6 +2,10 @@ import random
 import yaml
 import os
 import streamlit as st
+# random number for background image
+if "bg_idx" not in st.session_state:
+    st.session_state.bg_idx = random.randint(1, 23)  # Generate a random background index only once
+
 
 # Streamlit App
 st.title("Car Challenge Generator")
@@ -15,20 +19,46 @@ def load_yaml_data():
     yaml_file = os.path.join(script_dir, 'car_data.yaml')  # Path to the YAML file
     with open(yaml_file, 'r') as file:
         return yaml.safe_load(file)
-def add_bg():
+def add_bg(idx):
+
+    # Define the CSS with opacity and a randomized URL
     st.markdown(
         f"""
         <style>
         .stApp {{
-            background-image: url("https://raw.githubusercontent.com/lifestepvan2/ACG/refs/heads/main/static/11.png");
+            background: none; /* Remove any default background styling */
+        }}
+        .background {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url("https://raw.githubusercontent.com/lifestepvan2/ACG/refs/heads/main/static/{idx}.png");
             background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }}
+        .overlay {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity and color here */
+            z-index: -1;
         }}
         </style>
+        <div class="background"></div>
+        <div class="overlay"></div>
         """,
         unsafe_allow_html=True
     )
 
-add_bg()
+# Call the function to set the background
+add_bg(st.session_state.bg_idx)
     
 yaml_data = load_yaml_data()
 
