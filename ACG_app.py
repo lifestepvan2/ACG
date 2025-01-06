@@ -15,8 +15,20 @@ def load_yaml_data():
     yaml_file = os.path.join(script_dir, 'car_data.yaml')  # Path to the YAML file
     with open(yaml_file, 'r') as file:
         return yaml.safe_load(file)
-
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    
 yaml_data = load_yaml_data()
+set_background(HiResPhoto2_1,920-1,080.png)
 
 def weighted_random_choice(variants):
     choices = []
@@ -51,24 +63,6 @@ def build_description(fields):
     raw_description = (f"a {fields['variant']} variant of a {fields['subjective_attribute']}, "
                         f"{fields['objective_attribute']} {fields['segment']} from {fields['year']}")
     return correct_indefinite_article(raw_description)
-
-# Streamlit App
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('HiResPhoto2_1,920-1,080.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .stApp {
-        background: transparent;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 if "fields" not in st.session_state:
     st.session_state.fields = generate_car_description()
