@@ -1,98 +1,102 @@
 year_range: [1946, 2020]  # Simple year range
 #caution: because of lazy coding, no spaces allowed!
 variants:  # List of selectable variants with weighting
-  - name: "Africa-Spec"
+  - name: "africa-Spec"
     weight: 3
-  - name: "China-Spec"
+  - name: "china-Spec"
     weight: 2
-  - name: "Base-Spec"
+  - name: "base-Spec"
     weight: 6
-  - name: "Mid-Spec"
-    weight: 7
-  - name: "Upper-Spec"
+  - name: "mid-Spec"
+    weight: 8
+  - name: "upper-Spec"
     weight: 5
-  - name: "Luxury-Spec"
+  - name: "luxury-Spec"
     weight: 4
-  - name: "Hot"
+  - name: "hot"
     weight: 4
-  - name: "All-Road"
+  - name: "sporty"
     weight: 3
-  - name: "Off-Road"
+  - name: "all-road"
     weight: 2
-  - name: "Homologation-Special"
+  - name: "off-road"
     weight: 2
-  - name: "Rallye"
+  - name: "homologation-special"
     weight: 2
-  - name: "Rally-Raid"
+  - name: "rallye"
     weight: 1
-  - name: "Racing"
+  - name: "rally-raid"
     weight: 1
-  - name: "Drag-Racing"
+  - name: "racing"
     weight: 1
-  - name: "Police"
+  - name: "drag-racing"
+    weight: 1
+  - name: "police"
     weight: 2
-  - name: "Taxi"
+  - name: "taxi"
     weight: 2
-  - name: "Concept-Car"
+  - name: "concept-car"
     weight: 1
-  - name: "Resto-Mod"
+  - name: "resto-mod"
     weight: 1
-  - name: "Trackday-Tuned"
+  - name: "trackday-tuned"
     weight: 2
   - name: "show-tuned"
     weight: 1
-  - name: "Utility/Transport"
+  - name: "utility/transport"
     weight: 3
-  - name: "MovieCar"
+  - name: "movie-car"
     weight: 1
-  - name: "Overlanding"
+  - name: "overlanding"
     weight: 2
-  - name: "Halo"
+  - name: "halo"
     weight: 1
-  - name: "Eco-Edition"
+  - name: "eco-edition"
     weight: 2
   - name: "land-speed-record"
+    weight: 1
+  - name: "F1-safety-car"
     weight: 1
 
 
 subsegments:  # Subsegments linked to parent segments
-  - name: "Micro-Car"
+  - name: "micro-car"
     parent: A
-  - name: "Small-Car"
+  - name: "small-car"
     parent: B
-  - name: "Compact-Car"
+  - name: "compact-car"
     parent: C
-  - name: "Midsize-Car"
+  - name: "midsize-car"
     parent: D
   - name: "station-wagon"
     parent: D
-  - name: "Full-Size-Car"
+  - name: "full-size-car"
     parent: E
-  - name: "Luxury-Car"
+  - name: "luxury-car"
     parent: F
-  - name: "Sportscar"
+  - name: "sportscar"
     parent: S
-  - name: "Supercar"
+  - name: "supercar"
     parent: S
-  - name: "Hypercar"
+  - name: "hypercar"
     parent: S
-  - name: "Minivan"
+  - name: "minivan"
     parent: M
-  - name: "Multivan"
+  - name: "multivan"
     parent: M
-  - name: "Utility-Vehicle"
+  - name: "utility-vehicle"
     parent: M
-  - name: "Small-SUV"
+  - name: "small-SUV"
     parent: C
-  - name: "Midsize-SUV"
+  - name: "midsize-SUV"
     parent: J
-  - name: "Fullsize-SUV"
+  - name: "fullsize-SUV"
     parent: J
-  - name: "Small-Offroad"
+  - name: "small-offroad"
     parent: C
-  - name: "Midsize-Offroad"
+  - name: "midsize-offroad"
     parent: J
-  - name: "Fullsize-Offroad"
+  - name: "fullsize-offroad"
     parent: J
 
 parent_segments:  # Parent segments with attributes
@@ -118,25 +122,25 @@ parent_segments:  # Parent segments with attributes
       - "vibrant"
       - "dynamic"
       - "sporty"
-      - "Adventurous"
-      - "Chic"
-      - "Youthful"
-      - "Quirky"
+      - "adventurous"
+      - "chic"
+      - "youthful"
+      - "quirky"
       - "fun"
     objective_attributes:
-      - "Compact"
-      - "Lightweight"
-      - "Fuel-efficient"
-      - "Affordable"
-      - "Simple"
-      - "City-focused"
+      - "compact"
+      - "lightweight"
+      - "fuel-efficient"
+      - "affordable"
+      - "simple"
+      - "city-focused"
       - "practical"
-      - "Versatile"
-      - "Durable"
+      - "versatile"
+      - "durable"
       - "low-power"
-      - "Family-friendly"
+      - "family-friendly"
       - "technologically-Advanced"
-      - "Uncompromised"
+      - "uncompromised"
 
   B:  # Small cars
     subjective_attributes:
@@ -163,26 +167,26 @@ parent_segments:  # Parent segments with attributes
       - "vibrant"
       - "dynamic"
       - "sporty"
-      - "Adventurous"
-      - "Chic"
-      - "Youthful"
-      - "Quirky"
+      - "adventurous"
+      - "chic"
+      - "youthful"
+      - "quirky"
       - "fun"
     objective_attributes:
-      - "Compact"
-      - "Lightweight"
-      - "Fuel-efficient"
-      - "Affordable"
-      - "Simple"
-      - "City-focused"
+      - "compact"
+      - "lightweight"
+      - "fuel-efficient"
+      - "affordable"
+      - "simple"
+      - "city-focused"
       - "practical"
-      - "Versatile"
-      - "Durable"
-      - "Comfortable"
-      - "CompetitivePrice-performanceRatio"
-      - "moderatelyPowerful"
-      - "lowPower"
-      - "Family-friendly"
+      - "versatile"
+      - "durable"
+      - "comfortable"
+      - "competitively priced"
+      - "moderately-powerful"
+      - "low-power"
+      - "family-friendly"
       - "technologically-Advanced"
 
   C:  # Compact cars
@@ -317,9 +321,10 @@ parent_segments:  # Parent segments with attributes
       - "vibrant"
       - "dynamic"
       - "sporty"
-      - "Chic"
-      - "Quirky"
+      - "chic"
+      - "quirky"
       - "fun"
+      - "unorthodox"
     objective_attributes:
       - "Lightweight"
       - "Fuel-efficient"
@@ -414,8 +419,8 @@ parent_segments:  # Parent segments with attributes
       - "dynamic"
       - "sporty"
       - "Chic"
-      - "Youthful"
-      - "Quirky"
+      - "youthful"
+      - "quirky"
       - "fun"
     objective_attributes:
       - "Lightweight"
@@ -462,6 +467,8 @@ parent_segments:  # Parent segments with attributes
       - "youthful"
       - "quirky"
       - "fun"
+      - "unorthodox"
+      - "cutting edge"
     objective_attributes:
       - "compact"
       - "lightweight"
