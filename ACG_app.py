@@ -3,8 +3,8 @@ import yaml
 import os
 import streamlit as st
 
-description = ""
-st.write(description)
+description_placeholder = st.empty()
+description_placeholder.text("")
 
 # Load YAML data from the car_data.yaml file
 def load_yaml_data():
@@ -50,19 +50,19 @@ if "fields" not in st.session_state:
 if st.button("Generate Challenge"):
     st.session_state.fields = generate_car_description()
     description = build_description(st.session_state.fields)
-    st.write(description)
+    description_placeholder.text(description)
 
 if st.button("Reroll Year"):
     st.session_state.fields["year"] = random.randint(
         yaml_data['year_range'][0], yaml_data['year_range'][1]
     )
     description = build_description(st.session_state.fields)
-    st.write(description)
+    description_placeholder.text(description)
 
 if st.button("Reroll Variant"):
     st.session_state.fields["variant"] = weighted_random_choice(yaml_data['variants'])
     description = build_description(st.session_state.fields)
-    st.write(description)
+    description_placeholder.text(description)
 
 if st.button("Reroll Attributes"):
     segment = random.choice(list(yaml_data['subsegments']))
@@ -71,4 +71,4 @@ if st.button("Reroll Attributes"):
     st.session_state.fields["objective_attribute"] = random.choice(parent_segment['objective_attributes'])
     st.session_state.fields["segment"] = segment['name']
     description = build_description(st.session_state.fields)
-    st.write(description)
+    description_placeholder.text(description)
