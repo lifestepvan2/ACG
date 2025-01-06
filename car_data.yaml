@@ -2,15 +2,15 @@ year_range: [1946, 2020]  # Simple year range
 #caution: because of lazy coding, no spaces allowed!
 variants:  # List of selectable variants with weighting
   - name: "africa-spec"
-    weight: 3
+    weight: 4
   - name: "china-spec"
-    weight: 2
+    weight: 3
   - name: "base-spec"
-    weight: 6
+    weight: 5
   - name: "mid-spec"
     weight: 8
   - name: "upper-spec"
-    weight: 5
+    weight: 7
   - name: "luxury-spec"
     weight: 4
   - name: "hot"
@@ -47,11 +47,13 @@ variants:  # List of selectable variants with weighting
     weight: 3
   - name: "movie car"
     weight: 1
+  - name: "getaway car"
+    weight: 1
   - name: "overlanding"
     weight: 2
   - name: "halo"
     weight: 1
-  - name: "eco-edition"
+  - name: "eco"
     weight: 2
   - name: "land speed record"
     weight: 1
@@ -59,27 +61,36 @@ variants:  # List of selectable variants with weighting
     weight: 1
   - name: "Formula Drift"
     weight: 1
-
+  - name: "open top"
+    weight: 3
+  - name: "track only, non-road-legal"
+    weight: 2
+  - name: "hillclimb racing"
+    weight: 1
 
 subsegments:  # Subsegments linked to parent segments
-  - name: "micro-car"
+  - name: "micro car"
     parent: A
-  - name: "small-car"
+  - name: "small car"
     parent: B
-  - name: "compact-car"
+  - name: "compact car"
     parent: C
-  - name: "midsize-car"
+  - name: "crossover"
+    parent: C
+  - name: "midsize car"
     parent: D
-  - name: "station-wagon"
+  - name: "station wagon"
     parent: D
-  - name: "full-size-car"
+  - name: "full-size car"
     parent: E
-  - name: "luxury-car"
+  - name: "luxury car"
     parent: F
   - name: "sportscar"
     parent: S
   - name: "supercar"
     parent: S
+  - name: "convertible"
+    parent: D
   - name: "hypercar"
     parent: S
   - name: "minivan"
@@ -114,7 +125,6 @@ parent_segments:  # Parent segments with attributes
       - "sophisticated"
       - "bold"
       - "understated"
-      - "subtle"
       - "simple"
       - "rugged"
       - "driver-focused"
@@ -132,6 +142,9 @@ parent_segments:  # Parent segments with attributes
       - "outdated"
       - "a deathtrap"
       - "a shitbox"
+      - "a product of communism"
+      - "a commercial failure"
+      - "beloved by enthusiasts"
     objective_attributes:
       - "compact"
       - "lightweight"
@@ -146,7 +159,8 @@ parent_segments:  # Parent segments with attributes
       - "family-friendly"
       - "technologically-Advanced"
       - "uncompromised"
-
+      - "a car of the people"
+      - "a commercial failure"
   B:  # Small cars
     subjective_attributes:
       - "youthful"
@@ -179,6 +193,10 @@ parent_segments:  # Parent segments with attributes
       - "fun"
       - "a shitbox"
       - "a true driver's car"
+      - "a car of the people"
+      - "a product of communism"
+      - "a commercial failure"
+      - "beloved by enthusiasts"
     objective_attributes:
       - "compact"
       - "lightweight"
@@ -231,6 +249,11 @@ parent_segments:  # Parent segments with attributes
       - "a fashion statement"
       - "a true driver's car"
       - "a bit of a shitbox"
+      - "a car of the people"
+      - "designed for seniors"
+      - "a product of communism"
+      - "a commercial failure"
+      - "beloved by enthusiasts"
     objective_attributes:
       - "compact"
       - "lightweight"
@@ -252,6 +275,7 @@ parent_segments:  # Parent segments with attributes
       - "luxurious"
       - "high-power"
       - "silent"
+      - "suitable for winter conditions"
 
   D:  # Mid-size cars
     subjective_attributes:
@@ -284,6 +308,11 @@ parent_segments:  # Parent segments with attributes
       - "youthful"
       - "quirky"
       - "fun"
+      - "designed for seniors"
+      - "a product of communism"
+      - "beloved by enthusiasts"
+      - "a true driver's car"
+      - "a commercial failure"
     objective_attributes:
       - "lightweight"
       - "fuel-efficient"
@@ -304,7 +333,7 @@ parent_segments:  # Parent segments with attributes
       - "high-power"
       - "quiet"
       - "cutting edge"
-
+      - "suitable for winter conditions"      
   E:  # Executive cars
     subjective_attributes:
       - "stylish"
@@ -339,6 +368,11 @@ parent_segments:  # Parent segments with attributes
       - "unorthodox"
       - "a fashion statement"
       - "a menace to society"
+      - "designed for seniors"
+      - "a product of communism"
+      - "beloved by enthusiasts"
+      - "a true driver's car"
+      - "a commercial failure"
     objective_attributes:
       - "lightweight"
       - "fuel-efficient"
@@ -356,6 +390,7 @@ parent_segments:  # Parent segments with attributes
       - "luxurious"
       - "high-power"
       - "silent"
+      - "suitable for winter conditions"
 
   F:  # Luxury cars
     subjective_attributes:
@@ -407,62 +442,13 @@ parent_segments:  # Parent segments with attributes
       - "uncompromised"
       - "high-power"
       - "silent"
-
+      - "suitable for winter conditions"
+      - "a commercial failure"
   S:  # Sports/Performance cars
     subjective_attributes:
       - "youthful"
       - "stylish"
-      - "old-fashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "exclusive"
-      - "elite"
-      - "timeles"
-      - "opulent"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "simple"
-      - "rugged"
-      - "executive"
-      - "driver-focused"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "chic"
-      - "youthful"
-      - "quirky"
-      - "fun"
-      - "built by a man in a shed"
-      - "a menace to society"
-      - "a fashion statement"
-      - "a symbol of statement"
-      - "fit for a king"
-      - "a true driver's car"
-    objective_attributes:
-      - "lightweight"
-      - "compact"
-      - "versatile"
-      - "cargo-capable"
-      - "comfortable"
-      - "high-power"
-      - "quiet"
-      - "low-power"
-      - "high downforce"
-      - "equipped with a manual gearbox"
-      - "without any electronic aids"
-  M:  # Minivan/Multivan/Utility Van
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "old-fashioned"
+      - "old school"
       - "modern"
       - "elegant"
       - "prestigious"
@@ -471,9 +457,58 @@ parent_segments:  # Parent segments with attributes
       - "exclusive"
       - "elite"
       - "timeless"
-      - "majestic"
       - "opulent"
       - "graceful"
+      - "forward-thinking"
+      - "sophisticated"
+      - "bold"
+      - "understated"
+      - "simple"
+      - "driver-focused"
+      - "vibrant"
+      - "chic"
+      - "youthful"
+      - "unorthodox"
+      - "built by a man in a shed"
+      - "a menace to society"
+      - "a fashion statement"
+      - "a symbol of statement"
+      - "fit for a king"
+      - "a true driver's car"
+      - "iconic"
+      - "sleek"
+      - "wedge-shaped"
+      - "unorthodox"
+      - "a product of communism"
+      - "suitable for winter conditions"
+      - "beloved by enthusiasts"
+      - "a commercial failure"
+    objective_attributes:
+      - "lightweight"
+      - "compact"
+      - "versatile"
+      - "a four seater"
+      - "comfortable"
+      - "high-power"
+      - "quiet"
+      - "low-power"
+      - "high downforce"
+      - "equipped with a manual gearbox"
+      - "free of any electronic aids"
+      - "F1-derived"      
+  M:  # Minivan/Multivan/Utility Van
+    subjective_attributes:
+      - "stylish"
+      - "old-fashioned"
+      - "modern"
+      - "elegant"
+      - "prestigious"
+      - "benchmark"
+      - "refined"
+      - "exclusive"
+      - "elite"
+      - "majestic"
+      - "opulent"
       - "forward-thinking"
       - "sophisticated"
       - "bold"
@@ -496,6 +531,9 @@ parent_segments:  # Parent segments with attributes
       - "fun"
       - "unorthodox"
       - "cutting edge"
+      - "designed for seniors"
+      - "a product of communism"
+      - "suitable for winter conditions"
     objective_attributes:
       - "compact"
       - "lightweight"
@@ -559,7 +597,13 @@ parent_segments:  # Parent segments with attributes
       - "a symbol of statement"
       - "fit for a king"
       - "a farmer's favourite"
+      - "a product of communism"
+      - "free of any electronic aids"
+      - "beloved by enthusiasts"
+      - "a true driver's car"
+      - "a commercial failure"
     objective_attributes:
+      - "suitable for winter conditions"
       - "compact"
       - "lightweight"
       - "fuel-efficient"
@@ -571,12 +615,12 @@ parent_segments:  # Parent segments with attributes
       - "cargo-capable"
       - "durable"
       - "comfortable"
-      - "competitive-price-performance-ratio"
-      - "moderately-powerful"
+      - "competitive price-performance-ratio"
+      - "moderately powerful"
       - "low-power"
       - "family-friendly"
       - "spacious"
-      - "technologically-Advanced"
+      - "technologically advanced"
       - "luxurious"
       - "uncompromised"
       - "high-power"
