@@ -358,6 +358,8 @@ parent_segments:  # Parent segments with attributes
       - "retro"
       - "a popular choice with hipsters"
       - "the most stolen vehicle in the UK"
+      - "famous for its unique, but troublesome powertrain"
+      - "known for being able to outrun any police car of its time"    
     objective_attributes:
       - "lightweight"
       - "fuel-efficient"
@@ -383,9 +385,7 @@ parent_segments:  # Parent segments with attributes
       - "high-power"
       - "quiet"
       - "cutting edge"
-      - "suitable for winter conditions"
-      - "famous for its unique, but troublesome powertrain"
-      - "known for being able to outrun any police car of its time"      
+      - "suitable for winter conditions"  
   E:  # Executive cars
     subjective_attributes:
       - "stylish"
