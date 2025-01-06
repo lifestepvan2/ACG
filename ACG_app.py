@@ -3,6 +3,9 @@ import yaml
 import os
 import streamlit as st
 
+# Streamlit App
+st.title("Car Challenge Generator")
+
 description_placeholder = st.empty()
 description_placeholder.text("")
 
@@ -41,8 +44,7 @@ def build_description(fields):
     return (f"a {fields['variant']} variant of a {fields['subjective_attribute']}, "
             f"{fields['objective_attribute']} {fields['segment']} from {fields['year']}")
 
-# Streamlit App
-st.title("Car Challenge Generator")
+
 
 if "fields" not in st.session_state:
     st.session_state.fields = generate_car_description()
