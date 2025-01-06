@@ -54,11 +54,13 @@ if st.button("Reroll Year"):
     st.session_state.fields["year"] = random.randint(
         yaml_data['year_range'][0], yaml_data['year_range'][1]
     )
-    st.experimental_rerun()
+    description = build_description(st.session_state.fields)
+    st.write(description)
 
 if st.button("Reroll Variant"):
     st.session_state.fields["variant"] = weighted_random_choice(yaml_data['variants'])
-    st.experimental_rerun()
+    description = build_description(st.session_state.fields)
+    st.write(description)
 
 if st.button("Reroll Attributes"):
     segment = random.choice(list(yaml_data['subsegments']))
@@ -66,4 +68,5 @@ if st.button("Reroll Attributes"):
     st.session_state.fields["subjective_attribute"] = random.choice(parent_segment['subjective_attributes'])
     st.session_state.fields["objective_attribute"] = random.choice(parent_segment['objective_attributes'])
     st.session_state.fields["segment"] = segment['name']
-    st.experimental_rerun()
+    description = build_description(st.session_state.fields)
+    st.write(description)
