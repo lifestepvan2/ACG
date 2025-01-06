@@ -28,7 +28,7 @@ def generate_car_description():
 
 import streamlit as st
 
-st.title("Car Challenge Generator")
+st.title("Automation Challenge Generator")
 if st.button("Generate Challenge"):
     st.session_state.description = generate_car_description()
 if "description" in st.session_state:
