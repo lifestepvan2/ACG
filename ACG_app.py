@@ -52,6 +52,24 @@ def build_description(fields):
                         f"{fields['objective_attribute']} {fields['segment']} from {fields['year']}")
     return correct_indefinite_article(raw_description)
 
+# Streamlit App
+st.markdown(
+    """
+    <style>
+    body {
+        background-image: url('HiResPhoto2_1,920-1,080.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .stApp {
+        background: transparent;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 if "fields" not in st.session_state:
     st.session_state.fields = generate_car_description()
 
