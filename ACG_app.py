@@ -46,9 +46,8 @@ if "fields" not in st.session_state:
 
 if st.button("Generate Challenge"):
     st.session_state.fields = generate_car_description()
-
-description = build_description(st.session_state.fields)
-st.write(description)
+    description = build_description(st.session_state.fields)
+    st.write(description)
 
 if st.button("Reroll Year"):
     st.session_state.fields["year"] = random.randint(
