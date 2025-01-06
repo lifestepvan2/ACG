@@ -40,11 +40,17 @@ def generate_car_description():
         "segment": segment['name']
     }
 
+def correct_indefinite_article(text):
+    words = text.split()
+    for i in range(len(words) - 1):
+        if words[i].lower() == "a" and words[i + 1][0].lower() in "aeiou":
+            words[i] = "an"
+    return " ".join(words)
+
 def build_description(fields):
-    return (f"a {fields['variant']} variant of a {fields['subjective_attribute']}, "
-            f"{fields['objective_attribute']} {fields['segment']} from {fields['year']}")
-
-
+    raw_description = (f"a {fields['variant']} variant of a {fields['subjective_attribute']}, "
+                        f"{fields['objective_attribute']} {fields['segment']} from {fields['year']}")
+    return correct_indefinite_article(raw_description)
 
 if "fields" not in st.session_state:
     st.session_state.fields = generate_car_description()
