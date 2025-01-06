@@ -92,8 +92,7 @@ def correct_indefinite_article(text):
     return " ".join(words)
 
 def build_description(fields):
-    raw_description = (f"a {fields['variant']} variant of a {fields['subjective_attribute']}, "
-                        f"{fields['objective_attribute']} {fields['segment']} from {fields['year']}")
+    raw_description = (f"It is the year {fields['year']}.\nYou are tasked with designing a {fields['variant']} variant of a {fields['segment']} that is {fields['objective_attribute']} and {fields['subjective_attribute']}.")
     return correct_indefinite_article(raw_description)
 
 if "fields" not in st.session_state:
