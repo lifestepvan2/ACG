@@ -82,7 +82,7 @@ def generate_car_description():
         "subjective_attribute": subjective_attribute,
         "objective_attribute": objective_attribute,
         "segment": segment['name'],
-        "parent_segment": segment['parent']
+        "parent_segment": parent_segment
     }
 
 def correct_indefinite_article(text):
