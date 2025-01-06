@@ -28,7 +28,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
 yaml_data = load_yaml_data()
-set_background(HiResPhoto2_1,920-1,080.png)
+set_background("HiResPhoto2_1,920-1,080.png")
 
 def weighted_random_choice(variants):
     choices = []
