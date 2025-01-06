@@ -1,41 +1,41 @@
 year_range: [1946, 2020]  # Simple year range
 #caution: because of lazy coding, no spaces allowed!
 variants:  # List of selectable variants with weighting
-  - name: "africa-Spec"
+  - name: "africa-spec"
     weight: 3
-  - name: "china-Spec"
+  - name: "china-spec"
     weight: 2
-  - name: "base-Spec"
+  - name: "base-spec"
     weight: 6
-  - name: "mid-Spec"
+  - name: "mid-spec"
     weight: 8
-  - name: "upper-Spec"
+  - name: "upper-spec"
     weight: 5
-  - name: "luxury-Spec"
+  - name: "luxury-spec"
     weight: 4
   - name: "hot"
     weight: 4
   - name: "sporty"
     weight: 3
-  - name: "all-road"
+  - name: "allroad"
     weight: 2
-  - name: "off-road"
+  - name: "offroad"
     weight: 2
-  - name: "homologation-special"
+  - name: "homologation special"
     weight: 2
   - name: "rallye"
     weight: 1
-  - name: "rally-raid"
+  - name: "rally raid"
     weight: 1
   - name: "racing"
     weight: 1
-  - name: "drag-racing"
+  - name: "drag racing"
     weight: 1
   - name: "police"
     weight: 2
   - name: "taxi"
     weight: 2
-  - name: "concept-car"
+  - name: "concept car"
     weight: 1
   - name: "resto-mod"
     weight: 1
@@ -45,7 +45,7 @@ variants:  # List of selectable variants with weighting
     weight: 1
   - name: "utility/transport"
     weight: 3
-  - name: "movie-car"
+  - name: "movie car"
     weight: 1
   - name: "overlanding"
     weight: 2
@@ -53,9 +53,11 @@ variants:  # List of selectable variants with weighting
     weight: 1
   - name: "eco-edition"
     weight: 2
-  - name: "land-speed-record"
+  - name: "land speed record"
     weight: 1
-  - name: "F1-safety-car"
+  - name: "F1 safety car"
+    weight: 1
+  - name: "Formula Drift"
     weight: 1
 
 
@@ -84,19 +86,19 @@ subsegments:  # Subsegments linked to parent segments
     parent: M
   - name: "multivan"
     parent: M
-  - name: "utility-vehicle"
+  - name: "utility vehicle"
     parent: M
-  - name: "small-SUV"
+  - name: "small SUV"
     parent: C
-  - name: "midsize-SUV"
+  - name: "midsize SUV"
     parent: J
-  - name: "fullsize-SUV"
+  - name: "fullsize SUV"
     parent: J
-  - name: "small-offroad"
+  - name: "small offroader"
     parent: C
-  - name: "midsize-offroad"
+  - name: "midsize offroader"
     parent: J
-  - name: "fullsize-offroad"
+  - name: "fullsize offroader"
     parent: J
 
 parent_segments:  # Parent segments with attributes
@@ -127,6 +129,8 @@ parent_segments:  # Parent segments with attributes
       - "youthful"
       - "quirky"
       - "fun"
+      - "outdated"
+      - "deathtrap"
     objective_attributes:
       - "compact"
       - "lightweight"
@@ -172,6 +176,7 @@ parent_segments:  # Parent segments with attributes
       - "youthful"
       - "quirky"
       - "fun"
+      - "shitbox"
     objective_attributes:
       - "compact"
       - "lightweight"
@@ -216,10 +221,11 @@ parent_segments:  # Parent segments with attributes
       - "dynamic"
       - "sporty"
       - "Adventurous"
-      - "Chic"
-      - "Youthful"
-      - "Quirky"
+      - "chic"
+      - "youthful"
+      - "quirky"
       - "fun"
+      - "deathtrap"
     objective_attributes:
       - "Compact"
       - "Lightweight"
@@ -274,24 +280,25 @@ parent_segments:  # Parent segments with attributes
       - "Quirky"
       - "fun"
     objective_attributes:
-      - "Lightweight"
-      - "Fuel-efficient"
-      - "Affordable"
-      - "Simple"
+      - "lightweight"
+      - "fuel-efficient"
+      - "affordable"
+      - "simple"
       - "practical"
-      - "Versatile"
+      - "versatile"
       - "cargo-capable"
-      - "Durable"
-      - "Comfortable"
-      - "competitive-price-performance-ratio"
-      - "moderately-powerful"
+      - "durable"
+      - "comfortable"
+      - "competitive price performance ratio"
+      - "moderately powerful"
       - "low-power"
-      - "Family-friendly"
-      - "Spacious"
+      - "family-friendly"
+      - "spacious"
       - "technologically-Advanced"
-      - "Luxurious"
+      - "luxurious"
       - "high-power"
-      - "Silent"
+      - "quiet"
+      - "cutting edge"
 
   E:  # Executive cars
     subjective_attributes:
@@ -326,10 +333,10 @@ parent_segments:  # Parent segments with attributes
       - "fun"
       - "unorthodox"
     objective_attributes:
-      - "Lightweight"
-      - "Fuel-efficient"
+      - "lightweight"
+      - "fuel-efficient"
       - "practical"
-      - "Versatile"
+      - "versatile"
       - "cargo-capable"
       - "Durable"
       - "Comfortable"
@@ -337,7 +344,7 @@ parent_segments:  # Parent segments with attributes
       - "moderately-powerful"
       - "low-power"
       - "Family-friendly"
-      - "Spacious"
+      - "spacious"
       - "technologically-Advanced"
       - "Luxurious"
       - "high-power"
@@ -371,8 +378,8 @@ parent_segments:  # Parent segments with attributes
       - "vibrant"
       - "dynamic"
       - "sporty"
-      - "Chic"
-      - "Quirky"
+      - "chic"
+      - "quirky"
       - "fun"
     objective_attributes:
       - "Fuel-efficient"
@@ -418,10 +425,11 @@ parent_segments:  # Parent segments with attributes
       - "vibrant"
       - "dynamic"
       - "sporty"
-      - "Chic"
+      - "chic"
       - "youthful"
       - "quirky"
       - "fun"
+      - "built by a man in a shed"
     objective_attributes:
       - "Lightweight"
       - "Compact"
@@ -486,10 +494,11 @@ parent_segments:  # Parent segments with attributes
       - "low-power"
       - "family-friendly"
       - "spacious"
-      - "technologically-Advanced"
+      - "technologically advanced"
       - "luxurious"
       - "high-power"
       - "silent"
+      - "cutting edge"
   J:  # Fullsize/Off-road SUVs and Trucks
     subjective_attributes:
       - "youthful"
