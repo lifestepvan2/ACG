@@ -10,7 +10,7 @@ if "bg_idx" not in st.session_state:
 # Streamlit App
 st.title("Automation Challenge Generator")
 
-description_placeholder = st.text()
+description_placeholder = st.empty()
 description_placeholder.text("")
 
 # Load YAML data from the car_data.yaml file
