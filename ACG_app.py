@@ -116,10 +116,7 @@ if st.button("Reroll Variant"):
     description_placeholder.text(description)
 
 if st.button("Reroll Attributes"):
-    segment = random.choice(list(yaml_data['subsegments']))
-    parent_segment = yaml_data['parent_segments'][segment['parent']]
     st.session_state.fields["subjective_attribute"] = random.choice(parent_segment['subjective_attributes'])
     st.session_state.fields["objective_attribute"] = random.choice(parent_segment['objective_attributes'])
-    st.session_state.fields["segment"] = segment['name']
     description = build_description(st.session_state.fields)
     description_placeholder.text(description)
