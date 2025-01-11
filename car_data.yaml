@@ -4,7 +4,7 @@ variants:  # List of selectable variants with weighting
     weight: 7
     excluded_from: E,F,S
   - name: "south-america-spec"
-    weight: 5
+    weight: 6
     excluded_from: F,S
   - name: "china-spec"
     weight: 4
@@ -34,7 +34,7 @@ variants:  # List of selectable variants with weighting
     weight: 5
     excluded_from: S
   - name: "allroad"
-    weight: 2
+    weight: 3
     excluded_from: 
   - name: "offroad"
     weight: 5
@@ -67,10 +67,10 @@ variants:  # List of selectable variants with weighting
     weight: 2
     excluded_from: S
   - name: "concept car"
-    weight: 1
+    weight: 2
     excluded_from: 
   - name: "resto-mod"
-    weight: 1
+    weight: 2
     excluded_from: 
   - name: "trackday-modified"
     weight: 2
@@ -78,9 +78,9 @@ variants:  # List of selectable variants with weighting
   - name: "show-modified"
     weight: 1
     excluded_from: 
-  - name: "modified sleeper"
-    weight: 1
-    excluded_from: 
+  - name: "modified sleeper build"
+    weight: 2
+    excluded_from: S
   - name: "utility/transport"
     weight: 5
     excluded_from: S,F
@@ -88,16 +88,16 @@ variants:  # List of selectable variants with weighting
     weight: 2
     excluded_from: 
   - name: "getaway car"
-    weight: 1
+    weight: 2
     excluded_from: 
   - name: "overlanding"
-    weight: 3
+    weight: 4
     excluded_from: A,S
   - name: "halo"
-    weight: 4
+    weight: 5
     excluded_from: 
   - name: "eco"
-    weight: 3
+    weight: 4
     excluded_from: J,M,F,S
   - name: "land speed record"
     weight: 1
@@ -109,23 +109,20 @@ variants:  # List of selectable variants with weighting
     weight: 1
     excluded_from: 
   - name: "open top"
-    weight: 4
+    weight: 5
     excluded_from: A,F,M
   - name: "non road-legal, track only"
-    weight: 2
+    weight: 3
     excluded_from: J,M,F
   - name: "hillclimb"
     weight: 1
     excluded_from: 
   - name: "hearse"
-    weight: 1  
+    weight: 1
     excluded_from: A,B,S
   - name: "amphibious"
     weight: 1
     excluded_from: 
-  - name: "sleeper build"
-    weight: 1
-    excluded_from: S
   - name: "military"
     weight: 3
     excluded_from: A,B,C,D,E,F,S,M
