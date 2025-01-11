@@ -71,15 +71,19 @@ def weighted_random_choice(variants):
 import random
 
 def generate_car_description(yaml_data):
-    # Generate year
-    year = random.randint(yaml_data['year_range'][0], yaml_data['year_range'][1])
-    
-    # Select a variant
-    variant = weighted_random_choice(yaml_data['variants'])
-    
-    # Select a subsegment
+    # Randomly select a segment
     segment = random.choice(list(yaml_data['subsegments']))
     parent_segment = segment['parent']
+
+    # Randomly select a variant, ensuring it's not excluded based on parent segment
+    variant = weighted_random_choice(yaml_data['variants'])
+    
+    # Check if the selected variant is excluded by the parent segment, re-draw if necessary
+    while 'excluded_from' in variant and parent_segment in variant['excluded_from']:
+        variant = weighted_random_choice(yaml_data['variants'])
+
+    # Select a variant
+    variant = weighted_random_choice(yaml_data['variants'])
     
     # Collect attributes relevant to the parent segment
     subjective_attributes = [
