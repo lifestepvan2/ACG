@@ -1,7 +1,132 @@
-objective_attributes:
+year_range: [1946, 2020]  # Simple year range
+variants:  # List of selectable variants with weighting
+  - name: "africa-spec"
+    weight: 4
+  - name: "china-spec"
+    weight: 3
+  - name: "base-spec"
+    weight: 6
+  - name: "mid-spec"
+    weight: 9
+  - name: "upper-spec"
+    weight: 8
+  - name: "luxury-spec"
+    weight: 6
+  - name: "hot"
+    weight: 5
+  - name: "sporty"
+    weight: 4
+  - name: "allroad"
+    weight: 2
+  - name: "offroad"
+    weight: 3
+  - name: "homologation special"
+    weight: 2
+  - name: "rallye"
+    weight: 1
+  - name: "rally raid"
+    weight: 1
+  - name: "circuit racing"
+    weight: 1
+  - name: "dragster"
+    weight: 1
+  - name: "police"
+    weight: 1
+  - name: "taxi"
+    weight: 1
+  - name: "concept car"
+    weight: 1
+  - name: "resto-mod"
+    weight: 1
+  - name: "trackday-tuned"
+    weight: 1
+  - name: "show-tuned"
+    weight: 1
+  - name: "utility/transport"
+    weight: 2
+  - name: "movie car"
+    weight: 1
+  - name: "getaway car"
+    weight: 1
+  - name: "overlanding"
+    weight: 2
+  - name: "halo"
+    weight: 1
+  - name: "eco"
+    weight: 3
+  - name: "land speed record"
+    weight: 1
+  - name: "F1 safety car"
+    weight: 1
+  - name: "Formula Drift"
+    weight: 1
+  - name: "open top"
+    weight: 3
+  - name: "track only, not road-legal"
+    weight: 2
+  - name: "hillclimb"
+    weight: 1
+  - name: "hearse"
+    weight: 1  
+  - name: "amphibious"
+    weight: 1
+  - name: "sleeper build"
+    weight: 1
+  - name: "military"
+    weight: 1
+
+subsegments:  # Subsegments linked to parent segments
+  - name: "micro car"
+    parent: A
+  - name: "small car"
+    parent: B
+  - name: "compact car"
+    parent: C
+  - name: "crossover"
+    parent: C
+  - name: "midsize car"
+    parent: D
+  - name: "station wagon"
+    parent: D
+  - name: "sedan"
+    parent: D
+  - name: "full-size car"
+    parent: E
+  - name: "luxury car"
+    parent: F
+  - name: "sportscar"
+    parent: S
+  - name: "coupé"
+    parent: S
+  - name: "supercar"
+    parent: S
+  - name: "convertible"
+    parent: D
+  - name: "hypercar"
+    parent: S
+  - name: "minivan"
+    parent: M
+  - name: "multivan"
+    parent: M
+  - name: "utility vehicle"
+    parent: M
+  - name: "small SUV"
+    parent: C
+  - name: "midsize SUV"
+    parent: J
+  - name: "fullsize SUV"
+    parent: J
+  - name: "small offroader"
+    parent: C
+  - name: "midsize offroader"
+    parent: J
+  - name: "fullsize offroader"
+    parent: J
+
+bjective_attributes:
   F1-derived: S
-  a car of the people: A
-  a commercial failure: A
+  a car of the people: A,B
+  a commercial failure: A,B,C,D,E,F,M,J,S
   a four seater: S
   affordable: A,B,C,D,J,M
   capable of towing several tons: J
@@ -9,38 +134,32 @@ objective_attributes:
   city-focused: A,B,C,J,M
   comfortable: B,C,D,E,F,J,M,S
   compact: A,B,C,M,S
-  competitive priced: E
-  competitively priced: B,C,D,F,J,M
-  cutting edge: D,M
+  competitively priced: B,C,D,E,F,J,M
+  cutting edge: D,E,F,M,J,S
   durable: A,B,C,D,E,J,M
   equipped with a manual gearbox: S
   equipped with locking differentials: J
-  family friendly: C
-  family-friendly: A,B,D,E,F,J,M
+  family-friendly: B,C,D,E,F,J,M
   famously unreliable: D
   free of any electronic aids: S
   front engined: S
   fuel-efficient: A,B,C,D,E,F,J,M
-  futuristic: D
-  great for towing: J
-  high displacement: D,D,E,F,M
+  great for towing: J,M,D,E
+  high displacement: D,E,F,M
   high downforce: S
   high-power: C,D,E,F,J,M,S
   innovative: C,D,E,F,J,M
   lightweight: A,B,C,D,E,J,M,S
-  low power: B,C
-  low-power: A,D,E,J,M,S
+  low-power: A,B,C,D,E,J,M,S
   luxurious: D,E,F,J,M
-  moderately powerful: B,C,D,J,M
-  moderately-powerful: E,F
-  moderatly powerful: S
-  naturally aspirated: A,B,S
+  moderately powerful: B,C,D,E,F,J,M,S
+  naturally aspirated: A,B,C,S
   one of its kind: M,S
   practical: A,B,C,D,E,F,J,M
   quiet: D,S
   rear engined: A,B,S
-  relatively compact: J
-  silent: C,E,F,M
+  relatively compact: D,E,J,M
+  silent: C,E,F,M,J
   simple: A,B,C,D,J,M
   spacious: C,D,E,F,J,M
   suitable for winter conditions: C,D,E,F,J
