@@ -118,10 +118,10 @@ def build_description(fields):
     return correct_indefinite_article(raw_description)
 
 if "fields" not in st.session_state:
-    st.session_state.fields = generate_car_description()
+    st.session_state.fields = generate_car_description(yaml_data)
 
 if st.button("Generate Challenge"):
-    st.session_state.fields = generate_car_description()
+    st.session_state.fields = generate_car_description(yaml_data)
     description = build_description(st.session_state.fields)
     description_placeholder.text(description)
 
