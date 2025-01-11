@@ -71,6 +71,7 @@ def weighted_random_choice(variants):
 import random
 
 def generate_car_description(yaml_data):
+    year = random.randint(yaml_data['year_range'][0], yaml_data['year_range'][1])
     # Randomly select a segment
     segment = random.choice(list(yaml_data['subsegments']))
     parent_segment = segment['parent']
