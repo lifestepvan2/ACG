@@ -123,7 +123,7 @@ subsegments:  # Subsegments linked to parent segments
   - name: "fullsize offroader"
     parent: J
 
-bjective_attributes:
+objective_attributes:
   F1-derived: S
   a car of the people: A,B
   a commercial failure: A,B,C,D,E,F,M,J,S
