@@ -98,7 +98,7 @@ variants:  # List of selectable variants with weighting
     excluded_from: 
   - name: "eco"
     weight: 3
-    excluded_from: J,M,F
+    excluded_from: J,M,F,S
   - name: "land speed record"
     weight: 1
     excluded_from: J,M
