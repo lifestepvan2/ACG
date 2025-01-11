@@ -110,7 +110,7 @@ variants:  # List of selectable variants with weighting
     excluded_from: 
   - name: "open top"
     weight: 5
-    excluded_from: A,F,M
+    excluded_from: A,F,M,J
   - name: "non road-legal, track only"
     weight: 3
     excluded_from: J,M,F
