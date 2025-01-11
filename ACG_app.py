@@ -68,13 +68,33 @@ def weighted_random_choice(variants):
         choices.extend([variant['name']] * variant['weight'])
     return random.choice(choices)
 
-def generate_car_description():
+import random
+
+def generate_car_description(yaml_data):
+    # Generate year
     year = random.randint(yaml_data['year_range'][0], yaml_data['year_range'][1])
+    
+    # Select a variant
     variant = weighted_random_choice(yaml_data['variants'])
+    
+    # Select a subsegment
     segment = random.choice(list(yaml_data['subsegments']))
-    parent_segment = yaml_data['parent_segments'][segment['parent']]
-    subjective_attribute = random.choice(parent_segment['subjective_attributes'])
-    objective_attribute = random.choice(parent_segment['objective_attributes'])
+    parent_segment = segment['parent']
+    
+    # Collect attributes relevant to the parent segment
+    subjective_attributes = [
+        attr for attr, parents in yaml_data['subjective_attributes'].items()
+        if parent_segment in parents.split(',')
+    ]
+    
+    objective_attributes = [
+        attr for attr, parents in yaml_data['objective_attributes'].items()
+        if parent_segment in parents.split(',')
+    ]
+    
+    # Randomly choose an attribute
+    subjective_attribute = random.choice(subjective_attributes)
+    objective_attribute = random.choice(objective_attributes)
 
     return {
         "year": year,
@@ -84,6 +104,7 @@ def generate_car_description():
         "segment": segment['name'],
         "parent_segment": parent_segment
     }
+
 
 def correct_indefinite_article(text):
     words = text.split()

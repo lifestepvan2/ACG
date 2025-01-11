@@ -1,758 +1,131 @@
-year_range: [1946, 2020]  # Simple year range
-#caution: because of lazy coding, no spaces allowed!
-variants:  # List of selectable variants with weighting
-  - name: "africa-spec"
-    weight: 4
-  - name: "china-spec"
-    weight: 3
-  - name: "base-spec"
-    weight: 6
-  - name: "mid-spec"
-    weight: 9
-  - name: "upper-spec"
-    weight: 8
-  - name: "luxury-spec"
-    weight: 6
-  - name: "hot"
-    weight: 5
-  - name: "sporty"
-    weight: 4
-  - name: "allroad"
-    weight: 2
-  - name: "offroad"
-    weight: 3
-  - name: "homologation special"
-    weight: 2
-  - name: "rallye"
-    weight: 1
-  - name: "rally raid"
-    weight: 1
-  - name: "circuit racing"
-    weight: 1
-  - name: "dragster"
-    weight: 1
-  - name: "police"
-    weight: 1
-  - name: "taxi"
-    weight: 1
-  - name: "concept car"
-    weight: 1
-  - name: "resto-mod"
-    weight: 1
-  - name: "trackday-tuned"
-    weight: 1
-  - name: "show-tuned"
-    weight: 1
-  - name: "utility/transport"
-    weight: 2
-  - name: "movie car"
-    weight: 1
-  - name: "getaway car"
-    weight: 1
-  - name: "overlanding"
-    weight: 2
-  - name: "halo"
-    weight: 1
-  - name: "eco"
-    weight: 3
-  - name: "land speed record"
-    weight: 1
-  - name: "F1 safety car"
-    weight: 1
-  - name: "Formula Drift"
-    weight: 1
-  - name: "open top"
-    weight: 3
-  - name: "track only, not road-legal"
-    weight: 2
-  - name: "hillclimb"
-    weight: 1
-  - name: "hearse"
-    weight: 1  
-  - name: "amphibious"
-    weight: 1
-  - name: "sleeper build"
-    weight: 1
-  - name: "military"
-    weight: 1
-
-subsegments:  # Subsegments linked to parent segments
-  - name: "micro car"
-    parent: A
-  - name: "small car"
-    parent: B
-  - name: "compact car"
-    parent: C
-  - name: "crossover"
-    parent: C
-  - name: "midsize car"
-    parent: D
-  - name: "station wagon"
-    parent: D
-  - name: "sedan"
-    parent: D
-  - name: "full-size car"
-    parent: E
-  - name: "luxury car"
-    parent: F
-  - name: "sportscar"
-    parent: S
-  - name: "coupé"
-    parent: S
-  - name: "supercar"
-    parent: S
-  - name: "convertible"
-    parent: D
-  - name: "hypercar"
-    parent: S
-  - name: "minivan"
-    parent: M
-  - name: "multivan"
-    parent: M
-  - name: "utility vehicle"
-    parent: M
-  - name: "small SUV"
-    parent: C
-  - name: "midsize SUV"
-    parent: J
-  - name: "fullsize SUV"
-    parent: J
-  - name: "small offroader"
-    parent: C
-  - name: "midsize offroader"
-    parent: J
-  - name: "fullsize offroader"
-    parent: J
-
-parent_segments:  # Parent segments with attributes
-  A:  # Mini cars
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "old-fashioned"
-      - "modern"
-      - "elegant"
-      - "timeless"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "simple"
-      - "rugged"
-      - "driver-focused"
-      - "practical"
-      - "urban"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "adventurous"
-      - "chic"
-      - "youthful"
-      - "quirky"
-      - "fun"
-      - "outdated"
-      - "a deathtrap"
-      - "famously unreliable"
-      - "a product of communism"
-      - "a commercial failure"
-      - "famous for its unique, but troublesome powertrain"
-      - "was later found to violate various emission regulations"
-      - "widely known as the car that saved the company"
-      - "beloved by enthusiasts"
-      - "retro-styled"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-    objective_attributes:
-      - "compact"
-      - "lightweight"
-      - "fuel-efficient"
-      - "affordable"
-      - "simple"
-      - "city-focused"
-      - "practical"
-      - "versatile"
-      - "durable"
-      - "rear engined"
-      - "naturally aspirated"
-      - "low-power"
-      - "family-friendly"
-      - "technologically advanced"
-      - "uncompromised"
-      - "a car of the people"
-      - "a commercial failure"
-  B:  # Small cars
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "old fashioned"
-      - "modern"
-      - "elegant"
-      - "retro-styled"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-      - "benchmark"
-      - "refined"
-      - "timeless"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "subtle"
-      - "rugged"
-      - "driver-focused"
-      - "practical"
-      - "urban"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "chic"
-      - "youthful"
-      - "quirky"
-      - "fun"
-      - "a shitbox"
-      - "a bit of a shitbox"
-      - "a deathtrap"
-      - "a bit of a deathtrap"
-      - "better than its reputation"
-      - "a wolf in sheep's clothing"
-      - "famously unreliable"
-      - "a maintenance nightmare"
-      - "famous for its unique, but troublesome powertrain"
-      - "widely known as the car that doomed the company"
-      - "widely known as the car that saved the company"
-      - "was later found to violate various emission regulations"
-      - "a car of the people"
-      - "a product of communism"
-      - "a commercial failure"
-      - "beloved by enthusiasts"
-      - "inoffensive"
-    objective_attributes:
-      - "compact"
-      - "lightweight"
-      - "fuel-efficient"
-      - "affordable"
-      - "simple"
-      - "city-focused"
-      - "practical"
-      - "versatile"
-      - "durable"
-      - "comfortable"
-      - "competitively priced"
-      - "moderately powerful"
-      - "low power"
-      - "rear engined"
-      - "naturally aspirated"
-      - "family-friendly"
-      - "technologically advanced"
-
-  C:  # Compact cars
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "oldfashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "timeless"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "simple"
-      - "rugged"
-      - "driver-focused"
-      - "practical"
-      - "urban"
-      - "smart"
-      - "boring"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "adventurous"
-      - "chic"
-      - "quirky"
-      - "fun"
-      - "inoffensive"
-      - "a deathtrap"
-      - "a fashion statement"
-      - "a true driver's car"
-      - "a bit of a shitbox"
-      - "a car of the people"
-      - "better than its reputation"
-      - "a wolf in sheep's clothing"
-      - "designed for seniors"
-      - "a product of communism"
-      - "a commercial failure"
-      - "famously unreliable"
-      - "a maintenance nightmare"
-      - "beloved by enthusiasts"
-      - "widely known as the car that doomed the company"
-      - "widely known as the car that saved the company"
-      - "was later found to violate various emission regulations"
-      - "retro-styled"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-    objective_attributes:
-      - "compact"
-      - "lightweight"
-      - "fuel-efficient"
-      - "affordable"
-      - "simple"
-      - "city-focused"
-      - "practical"
-      - "versatile"
-      - "cargo capable"
-      - "durable"
-      - "comfortable"
-      - "competitively priced"
-      - "moderately powerful"
-      - "low power"
-      - "family friendly"
-      - "spacious"
-      - "technologically advanced"
-      - "innovative"
-      - "high-power"
-      - "silent"
-      - "suitable for winter conditions"
-
-  D:  # Mid-size cars
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "old-fashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "timeless"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "simple"
-      - "boring"
-      - "widely known as the car that doomed the company"
-      - "widely known as the car that saved the company"
-      - "rugged"
-      - "executive"
-      - "driver-focused"
-      - "practical"
-      - "urban"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "chic"
-      - "inoffensive"
-      - "youthful"
-      - "quirky"
-      - "better than its reputation"
-      - "a wolf in sheep's clothing"
-      - "fun"
-      - "a maintenance nightmare"
-      - "designed for seniors"
-      - "a product of communism"
-      - "beloved by enthusiasts"
-      - "a true driver's car"
-      - "famously unreliable"
-      - "a commercial failure"
-      - "retro-styled"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-      - "famous for its unique, but troublesome powertrain"
-      - "known for being able to outrun any police car of its time"  
-      - "was later found to violate various emission regulations"  
-    objective_attributes:
-      - "lightweight"
-      - "fuel-efficient"
-      - "affordable"
-      - "simple"
-      - "practical"
-      - "versatile"
-      - "cargo capable"
-      - "durable"
-      - "comfortable"
-      - "competitively priced"
-      - "moderately powerful"
-      - "low-power"
-      - "family-friendly"
-      - "high displacement"
-      - "spacious"
-      - "technologically advanced"
-      - "luxurious"
-      - "innovative"
-      - "famously unreliable"
-      - "futuristic"
-      - "high displacement"
-      - "high-power"
-      - "quiet"
-      - "cutting edge"
-      - "suitable for winter conditions"  
-  E:  # Executive cars
-    subjective_attributes:
-      - "stylish"
-      - "old fashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "exclusive"
-      - "elite"
-      - "timeless"
-      - "majestic"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "widely known as the car that doomed the company"
-      - "widely known as the car that saved the company"
-      - "was later found to violate various emission regulations"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "simple"
-      - "executive"
-      - "driver-focused"
-      - "practical"
-      - "smart"
-      - "dynamic"
-      - "sporty"
-      - "chic"
-      - "quirky"
-      - "fun"
-      - "unorthodox"
-      - "inoffensive"
-      - "a fashion statement"
-      - "a menace to society"
-      - "designed for seniors"
-      - "a maintenance nightmare"
-      - "a product of communism"
-      - "beloved by enthusiasts"
-      - "a true driver's car"
-      - "a commercial failure"
-      - "famously unreliable"
-      - "designed to stand out"
-      - "retro-styled"
-      - "famously unreliable"
-      - "futuristic"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-      - "famous for its unique, but troublesome powertrain"
-      - "known for being able to outrun any police car of its time"
-    objective_attributes:
-      - "lightweight"
-      - "fuel-efficient"
-      - "practical"
-      - "versatile"
-      - "cargo capable"
-      - "durable"
-      - "comfortable"
-      - "competitive priced"
-      - "moderately-powerful"
-      - "low-power"
-      - "family-friendly"
-      - "spacious"
-      - "technologically advanced"
-      - "luxurious"
-      - "innovative"
-      - "high-power"
-      - "silent"
-      - "high displacement"
-      - "suitable for winter conditions"
-  F:  # Luxury cars
-    subjective_attributes:
-      - "stylish"
-      - "old-fashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "exclusive"
-      - "elite"
-      - "timeless"
-      - "widely known as the car that doomed the company"
-      - "majestic"
-      - "opulent"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "executive"
-      - "driver-focused"
-      - "practical"
-      - "urban"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "somewhat sporty"
-      - "was later found to violate various emission regulations"
-      - "chic"
-      - "quirky"
-      - "fun"
-      - "a menace to society"
-      - "a fashion statement"
-      - "a symbol of statement"
-      - "fit for a king"
-      - "designed to stand out"
-      - "a commercial failure"
-      - "retro-styled"
-      - "famous for its unique, but troublesome powertrain"
-      - "the most stolen vehicle in the UK"
-    objective_attributes:
-      - "fuel-efficient"
-      - "practical"
-      - "versatile"
-      - "cargo capable"
-      - "comfortable"
-      - "competitively priced"
-      - "moderately-powerful"
-      - "family-friendly"
-      - "spacious"
-      - "technologically advanced"
-      - "luxurious"
-      - "uncompromised"
-      - "high-power"
-      - "high displacement"
-      - "silent"
-      - "suitable for winter conditions"
-      - "innovative"
-  S:  # Sports/Performance cars
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "old school"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "exclusive"
-      - "elite"
-      - "timeless"
-      - "opulent"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "widely known as the car that doomed the company"
-      - "bold"
-      - "understated"
-      - "simple"
-      - "driver-focused"
-      - "vibrant"
-      - "chic"
-      - "youthful"
-      - "unorthodox"
-      - "built by a man in a shed"
-      - "a menace to society"
-      - "a fashion statement"
-      - "a symbol of statement"
-      - "fit for a king"
-      - "a true driver's car"
-      - "iconic"
-      - "sleek"
-      - "wedge-shaped"
-      - "unorthodox"
-      - "a product of communism"
-      - "suitable for winter conditions"
-      - "beloved by enthusiasts"
-      - "a commercial failure"
-      - "high displacement"
-      - "designed to stand out"
-      - "banned in 22 US states"
-      - "retro-styled"
-      - "was later found to violate various emission regulations"
-      - "famously unreliable"
-      - "famous for its unique, but troublesome powertrain"
-      - "futuristic"
-      - "a popular choice with hipsters"
-      - "famous for its unique, but troublesome powertrain"
-      - "the most stolen vehicle in the UK"
-      - "named in honour of the company's founder"
-    objective_attributes:
-      - "lightweight"
-      - "compact"
-      - "versatile"
-      - "rear engined"
-      - "front engined"
-      - "naturally aspirated"
-      - "a four seater"
-      - "comfortable"
-      - "high-power"
-      - "quiet"
-      - "low-power"
-      - "moderatly powerful"
-      - "high downforce"
-      - "equipped with a manual gearbox"
-      - "free of any electronic aids"
-      - "F1-derived"
-      - "one of its kind"      
-  M:  # Minivan/Multivan/Utility Van
-    subjective_attributes:
-      - "stylish"
-      - "old-fashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "was later found to violate various emission regulations"
-      - "exclusive"
-      - "elite"
-      - "majestic"
-      - "opulent"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "widely known as the car that doomed the company"
-      - "widely known as the car that saved the company"
-      - "simple"
-      - "rugged"
-      - "executive"
-      - "driver-focused"
-      - "practical"
-      - "urban"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "adventurous"
-      - "chic"
-      - "youthful"
-      - "quirky"
-      - "fun"
-      - "unorthodox"
-      - "cutting edge"
-      - "designed for seniors"
-      - "a product of communism"
-      - "suitable for winter conditions"
-      - "designed to stand out"
-      - "famous for its unique, but troublesome powertrain"
-      - "retro-styled"
-      - "famously unreliable"
-      - "futuristic"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-    objective_attributes:
-      - "compact"
-      - "lightweight"
-      - "fuel-efficient"
-      - "affordable"
-      - "simple"
-      - "city-focused"
-      - "practical"
-      - "versatile"
-      - "cargo capable"
-      - "durable"
-      - "comfortable"
-      - "competitively priced"
-      - "moderately powerful"
-      - "low-power"
-      - "high displacement"
-      - "family-friendly"
-      - "spacious"
-      - "technologically advanced"
-      - "luxurious"
-      - "high-power"
-      - "silent"
-      - "cutting edge"
-      - "one of its kind"
-      - "innovative"
-  J:  # Fullsize/Off-road SUVs and Trucks
-    subjective_attributes:
-      - "youthful"
-      - "stylish"
-      - "old-fashioned"
-      - "modern"
-      - "elegant"
-      - "prestigious"
-      - "benchmark"
-      - "refined"
-      - "exclusive"
-      - "widely known as the car that doomed the company"
-      - "widely known as the car that saved the company"
-      - "elite"
-      - "timeless"
-      - "majestic"
-      - "opulent"
-      - "graceful"
-      - "forward-thinking"
-      - "sophisticated"
-      - "bold"
-      - "understated"
-      - "subtle"
-      - "simple"
-      - "rugged"
-      - "executive"
-      - "driver-focused"
-      - "practical"
-      - "was later found to violate various emission regulations"
-      - "urban"
-      - "smart"
-      - "vibrant"
-      - "dynamic"
-      - "sporty"
-      - "adventurous"
-      - "chic"
-      - "youthful"
-      - "quirky"
-      - "fun"
-      - "a menace to society"
-      - "high displacement"
-      - "a fashion statement"
-      - "a symbol of statement"
-      - "divisive"
-      - "a farmer's favourite"
-      - "a product of communism"
-      - "famous for its unique, but troublesome powertrain"
-      - "free of any electronic aids"
-      - "beloved by enthusiasts"
-      - "a true driver's car"
-      - "a commercial failure"
-      - "a bit of a shitbox"
-      - "a deathtrap"
-      - "designed to stand out"
-      - "retro-styled"
-      - "famously unreliable"
-      - "futuristic"
-      - "a popular choice with hipsters"
-      - "the most stolen vehicle in the UK"
-    objective_attributes:
-      - "suitable for winter conditions"
-      - "relatively compact"
-      - "innovative"
-      - "lightweight"
-      - "fuel-efficient"
-      - "affordable"
-      - "simple"
-      - "city-focused"
-      - "practical"
-      - "versatile"
-      - "great for towing"
-      - "capable of towing several tons"
-      - "cargo capable"
-      - "durable"
-      - "equipped with locking differentials"
-      - "comfortable"
-      - "competitively priced"
-      - "moderately powerful"
-      - "low-power"
-      - "family-friendly"
-      - "spacious"
-      - "technologically advanced"
-      - "luxurious"
-      - "uncompromised"
-      - "high-power"
+objective_attributes:
+  F1-derived: S
+  a car of the people: A
+  a commercial failure: A
+  a four seater: S
+  affordable: A,B,C,D,J,M
+  capable of towing several tons: J
+  cargo capable: C,D,E,F,J,M
+  city-focused: A,B,C,J,M
+  comfortable: B,C,D,E,F,J,M,S
+  compact: A,B,C,M,S
+  competitive priced: E
+  competitively priced: B,C,D,F,J,M
+  cutting edge: D,M
+  durable: A,B,C,D,E,J,M
+  equipped with a manual gearbox: S
+  equipped with locking differentials: J
+  family friendly: C
+  family-friendly: A,B,D,E,F,J,M
+  famously unreliable: D
+  free of any electronic aids: S
+  front engined: S
+  fuel-efficient: A,B,C,D,E,F,J,M
+  futuristic: D
+  great for towing: J
+  high displacement: D,D,E,F,M
+  high downforce: S
+  high-power: C,D,E,F,J,M,S
+  innovative: C,D,E,F,J,M
+  lightweight: A,B,C,D,E,J,M,S
+  low power: B,C
+  low-power: A,D,E,J,M,S
+  luxurious: D,E,F,J,M
+  moderately powerful: B,C,D,J,M
+  moderately-powerful: E,F
+  moderatly powerful: S
+  naturally aspirated: A,B,S
+  one of its kind: M,S
+  practical: A,B,C,D,E,F,J,M
+  quiet: D,S
+  rear engined: A,B,S
+  relatively compact: J
+  silent: C,E,F,M
+  simple: A,B,C,D,J,M
+  spacious: C,D,E,F,J,M
+  suitable for winter conditions: C,D,E,F,J
+  technologically advanced: A,B,C,D,E,F,J,M
+  uncompromised: A,F,J
+  versatile: A,B,C,D,E,F,J,M,S
+subjective_attributes:
+  a bit of a deathtrap: B
+  a bit of a shitbox: B,C,J
+  a car of the people: B,C
+  a commercial failure: A,B,C,D,E,F,J,S
+  a deathtrap: A,B,C,J
+  a farmer's favourite: J
+  a fashion statement: C,E,F,J,S
+  a maintenance nightmare: B,C,D,E
+  a menace to society: E,F,J,S
+  a popular choice with hipsters: A,B,C,D,E,J,M,S
+  a product of communism: A,B,C,D,E,J,M,S
+  a shitbox: B
+  a symbol of statement: F,J,S
+  a true driver's car: C,D,E,J,S
+  a wolf in sheep's clothing: B,C,D
+  adventurous: A,C,J,M
+  banned in 22 US states: S
+  beloved by enthusiasts: A,B,C,D,E,J,S
+  benchmark: B,C,D,E,F,J,M,S
+  better than its reputation: B,C,D
+  bold: A,B,C,D,E,F,J,M,S
+  boring: C,D
+  built by a man in a shed: S
+  chic: A,B,C,D,E,F,J,M,S
+  cutting edge: M
+  designed for seniors: C,D,E,M
+  designed to stand out: E,F,J,M,S
+  divisive: J
+  driver-focused: A,B,C,D,E,F,J,M,S
+  dynamic: A,B,C,D,E,F,J,M
+  elegant: A,B,C,D,E,F,J,M,S
+  elite: E,F,J,M,S
+  exclusive: E,F,J,M,S
+  executive: D,E,F,J,M
+  famous for its unique, but troublesome powertrain: A,B,D,E,F,J,M,S,S
+  famously unreliable: A,B,C,D,E,E,J,M,S
+  fit for a king: F,S
+  forward-thinking: A,B,C,D,E,F,J,M,S
+  free of any electronic aids: J
+  fun: A,B,C,D,E,F,J,M
+  futuristic: E,J,M,S
+  graceful: B,C,D,E,F,J,S
+  high displacement: J,S
+  iconic: S
+  inoffensive: B,C,D,E
+  known for being able to outrun any police car of its time: D,E
+  majestic: E,F,J,M
+  modern: A,B,C,D,E,F,J,M,S
+  named in honour of the company's founder: S
+  old fashioned: B,E
+  old school: S
+  old-fashioned: A,D,F,J,M
+  oldfashioned: C
+  opulent: F,J,M,S
+  outdated: A
+  practical: A,B,C,D,E,F,J,M
+  prestigious: C,D,E,F,J,M,S
+  quirky: A,B,C,D,E,F,J,M
+  refined: B,C,D,E,F,J,M,S
+  retro-styled: A,B,C,D,E,F,J,M,S
+  rugged: A,B,C,D,J,M
+  simple: A,C,D,E,J,M,S
+  sleek: S
+  smart: A,B,C,D,E,F,J,M
+  somewhat sporty: F
+  sophisticated: A,B,C,D,E,F,J,M,S
+  sporty: A,B,C,D,E,J,M
+  stylish: A,B,C,D,E,F,J,M,S
+  subtle: B,C,D,E,F,J,M
+  suitable for winter conditions: M,S
+  the most stolen vehicle in the UK: A,B,C,D,E,F,J,M,S
+  timeless: A,B,C,D,E,F,J,S
+  understated: A,C,D,E,F,J,M,S
+  unorthodox: E,M,S,S
+  urban: A,B,C,D,F,J,M
+  vibrant: A,B,C,D,F,J,M,S
+  was later found to violate various emission regulations: A,B,C,D,E,F,J,M,S
+  wedge-shaped: S
+  widely known as the car that doomed the company: B,C,D,E,F,J,M,S
+  widely known as the car that saved the company: A,B,C,D,E,J,M
+  youthful: A,B,C,D,J,M,S
