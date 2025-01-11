@@ -82,14 +82,8 @@ def generate_car_description(yaml_data):
         if 'excluded_from' not in variant or variant['excluded_from'] is None or parent_segment not in variant['excluded_from']
     ]
 
-    # Select a variant from the valid variants using weights
-    variant = weighted_random_choice(valid_variants)
-    # Check if the selected variant is excluded by the parent segment, re-draw if necessary
-    while 'excluded_from' in variant and parent_segment in variant['excluded_from']:
-        variant = weighted_random_choice(yaml_data['variants'])
-
     # Select a variant
-    variant = weighted_random_choice(yaml_data['variants'])
+    variant = weighted_random_choice(valid_variants)
     
     # Collect attributes relevant to the parent segment
     subjective_attributes = [
