@@ -70,12 +70,7 @@ def weighted_random_choice(variants):
 
 import random
 
-def generate_car_description(yaml_data):
-    year = random.randint(yaml_data['year_range'][0], yaml_data['year_range'][1])
-    # Randomly select a segment
-    segment = random.choice(list(yaml_data['subsegments']))
-    parent_segment = segment['parent']
-
+def select_valid_variant(yaml_data,parent_segment):
     # Create a list of valid variants based on the parent segment's exclusions
     valid_variants = [
         variant for variant in yaml_data['variants']
@@ -84,7 +79,9 @@ def generate_car_description(yaml_data):
 
     # Select a variant
     variant = weighted_random_choice(valid_variants)
-    
+    return variant
+
+def select_valid_attributes(yaml_data,parent_segment):
     # Collect attributes relevant to the parent segment
     subjective_attributes = [
         attr for attr, parents in yaml_data['subjective_attributes'].items()
@@ -99,6 +96,17 @@ def generate_car_description(yaml_data):
     # Randomly choose an attribute
     subjective_attribute = random.choice(subjective_attributes)
     objective_attribute = random.choice(objective_attributes)
+    return subjective_attribute, objective_attribute
+
+def generate_car_description(yaml_data):
+    year = random.randint(yaml_data['year_range'][0], yaml_data['year_range'][1])
+    # Randomly select a segment
+    segment = random.choice(list(yaml_data['subsegments']))
+    parent_segment = segment['parent']
+    variant = select_valid_variant(yaml_data,parent_segment)
+    subjective_attribute, objective_attribute = select_valid_attributes(yaml_data,parent_segment)
+    
+
 
     return {
         "year": year,
@@ -137,13 +145,18 @@ if st.button("Reroll Year"):
     description_placeholder.text(description)
 
 if st.button("Reroll Variant"):
+    parent_segment = st.session_state.fields["parent_segment"]
+    variant = select_valid_variant(yaml_data,parent_segment)
+    
     st.session_state.fields["variant"] = weighted_random_choice(yaml_data['variants'])
     description = build_description(st.session_state.fields)
     description_placeholder.text(description)
 
 if st.button("Reroll Attributes"):
     parent_segment = st.session_state.fields["parent_segment"]
-    st.session_state.fields["subjective_attribute"] = random.choice(parent_segment['subjective_attributes'])
-    st.session_state.fields["objective_attribute"] = random.choice(parent_segment['objective_attributes'])
+    subjective_attribute, objective_attribute = select_valid_attributes(yaml_data,parent_segment)
+
+    st.session_state.fields["subjective_attribute"] = subjective_attribute
+    st.session_state.fields["objective_attribute"] = objective_attribute
     description = build_description(st.session_state.fields)
     description_placeholder.text(description)
