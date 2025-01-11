@@ -148,7 +148,7 @@ if st.button("Reroll Variant"):
     parent_segment = st.session_state.fields["parent_segment"]
     variant = select_valid_variant(yaml_data,parent_segment)
     
-    st.session_state.fields["variant"] = weighted_random_choice(yaml_data['variants'])
+    st.session_state.fields["variant"] = variant
     description = build_description(st.session_state.fields)
     description_placeholder.text(description)
 
