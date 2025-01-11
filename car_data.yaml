@@ -2,78 +2,118 @@ year_range: [1946, 2020]  # Simple year range
 variants:  # List of selectable variants with weighting
   - name: "africa-spec"
     weight: 4
+    excluded_from: F
   - name: "china-spec"
     weight: 3
+    excluded_from: 
   - name: "base-spec"
     weight: 6
+    excluded_from: 
   - name: "mid-spec"
     weight: 9
+    excluded_from: 
   - name: "upper-spec"
     weight: 8
+    excluded_from: 
   - name: "luxury-spec"
     weight: 6
+    excluded_from: 
   - name: "hot"
     weight: 5
+    excluded_from: 
   - name: "sporty"
     weight: 4
+    excluded_from: S
   - name: "allroad"
     weight: 2
+    excluded_from: 
   - name: "offroad"
     weight: 3
+    excluded_from: 
   - name: "homologation special"
     weight: 2
+    excluded_from: 
   - name: "rallye"
     weight: 1
+    excluded_from: 
   - name: "rally raid"
     weight: 1
+    excluded_from: 
   - name: "circuit racing"
     weight: 1
+    excluded_from: 
+  - name: "time attack"
+    weight: 1
+    excluded_from: 
   - name: "dragster"
     weight: 1
+    excluded_from: 
   - name: "police"
     weight: 1
+    excluded_from: 
   - name: "taxi"
     weight: 1
+    excluded_from: S
   - name: "concept car"
     weight: 1
+    excluded_from: 
   - name: "resto-mod"
     weight: 1
+    excluded_from: 
   - name: "trackday-tuned"
     weight: 1
+    excluded_from: 
   - name: "show-tuned"
     weight: 1
+    excluded_from: 
   - name: "utility/transport"
     weight: 2
+    excluded_from: S,F
   - name: "movie car"
     weight: 1
+    excluded_from: 
   - name: "getaway car"
     weight: 1
+    excluded_from: 
   - name: "overlanding"
     weight: 2
+    excluded_from: A,S
   - name: "halo"
     weight: 1
+    excluded_from: 
   - name: "eco"
     weight: 3
+    excluded_from: J,M,F
   - name: "land speed record"
     weight: 1
+    excluded_from: 
   - name: "F1 safety car"
     weight: 1
+    excluded_from: 
   - name: "Formula Drift"
     weight: 1
+    excluded_from: 
   - name: "open top"
     weight: 3
+    excluded_from: A,F,M
   - name: "track only, not road-legal"
     weight: 2
+    excluded_from: J,M,F
   - name: "hillclimb"
     weight: 1
+    excluded_from: 
   - name: "hearse"
     weight: 1  
+    excluded_from: A,B,S
   - name: "amphibious"
     weight: 1
+    excluded_from: 
   - name: "sleeper build"
     weight: 1
+    excluded_from: 
   - name: "military"
-    weight: 1
+    weight: 3
+    excluded_from: A,B,C,D,E,F,S,M
 
 subsegments:  # Subsegments linked to parent segments
   - name: "micro car"
