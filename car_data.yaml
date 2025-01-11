@@ -38,19 +38,19 @@ variants:  # List of selectable variants with weighting
     excluded_from: 
   - name: "offroad"
     weight: 5
-    excluded_from: 
+    excluded_from: F
   - name: "homologation special"
     weight: 3
     excluded_from: F,M
   - name: "rallye"
     weight: 1
-    excluded_from: 
+    excluded_from: F
   - name: "rally raid"
     weight: 1
-    excluded_from: 
+    excluded_from: F
   - name: "circuit racing"
     weight: 1
-    excluded_from: 
+    excluded_from: F
   - name: "time attack"
     weight: 1
     excluded_from: 
@@ -235,14 +235,14 @@ subjective_attributes:
   a popular choice with hipsters: A,B,C,D,E,J,M,S
   a product of communism: A,B,C,D,E,J,M,S
   a shitbox: A,B,C,D,J,M
-  a symbol of statement: F,J,S
+  a symbol of status: F,J,S
   a true driver's car: C,D,E,J,S
   a wolf in sheep's clothing: B,C,D
   adventurous: A,C,J,M
   ambitious, but rubbish: A,B,C,D,E,F,J,M,S
   banned in 22 US states: S
   beloved by enthusiasts: A,B,C,D,E,J,S
-  benchmark: B,C,D,E,F,J,M,S
+  considered the class benchmark: B,C,D,E,F,J,M,S
   better than its reputation: B,C,D
   bold: A,B,C,D,E,F,J,M,S
   boring: C,D
