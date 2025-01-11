@@ -76,9 +76,14 @@ def generate_car_description(yaml_data):
     segment = random.choice(list(yaml_data['subsegments']))
     parent_segment = segment['parent']
 
-    # Randomly select a variant, ensuring it's not excluded based on parent segment
-    variant = weighted_random_choice(yaml_data['variants'])
-    
+    # Create a list of valid variants based on the parent segment's exclusions
+    valid_variants = [
+        variant for variant in yaml_data['variants']
+        if 'excluded_from' not in variant or parent_segment not in variant['excluded_from']
+    ]
+
+    # Select a variant from the valid variants using weights
+    variant = weighted_random_choice(valid_variants)
     # Check if the selected variant is excluded by the parent segment, re-draw if necessary
     while 'excluded_from' in variant and parent_segment in variant['excluded_from']:
         variant = weighted_random_choice(yaml_data['variants'])
