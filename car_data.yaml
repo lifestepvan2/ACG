@@ -211,7 +211,7 @@ objective_attributes:
   a four seater: S
   affordable: A,B,C,D,J,M
   boasting low end torque: B,C,D,E,F,J,M,S
-  boasting six+ seats: B,C,D,E,F,J,M,S
+  boasting six or more seats: B,C,D,E,F,J,M,S
   capable of towing several tons: J
   cargo capable: C,D,E,F,J,M
   city-focused: A,B,C,J,M
