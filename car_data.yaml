@@ -35,10 +35,16 @@ variants:  # List of selectable variants with weighting
     excluded_from: S
   - name: "allroad"
     weight: 3
-    excluded_from: 
+    excluded_from: J
+  - name: "softroader"
+    weight: 3
+    excluded_from: J
   - name: "offroad"
     weight: 5
-    excluded_from: F
+    excluded_from: F,J
+  - name: "hardcore offroad"
+    weight: 5
+    excluded_from: A,B,C,D,E,F,M,S
   - name: "homologation special"
     weight: 3
     excluded_from: F,M
