@@ -48,9 +48,15 @@ variants:  # List of selectable variants with weighting
   - name: "rally raid"
     weight: 1
     excluded_from: F
-  - name: "circuit racing"
+  - name: "touring car"
     weight: 1
-    excluded_from: F
+    excluded_from: J,S
+  - name: "GT racing"
+    weight: 1
+    excluded_from: A,B,C,F,J,M
+  - name: "rock crawler"
+    weight: 1
+    excluded_from: A,B,C,D,E,F,M,S
   - name: "time attack"
     weight: 1
     excluded_from: 
@@ -96,6 +102,9 @@ variants:  # List of selectable variants with weighting
   - name: "halo"
     weight: 5
     excluded_from: 
+  - name: "one-off halo concept"
+    weight: 1
+    excluded_from: 
   - name: "eco"
     weight: 4
     excluded_from: J,M,F,S
@@ -105,7 +114,7 @@ variants:  # List of selectable variants with weighting
   - name: "F1 safety car"
     weight: 1
     excluded_from: 
-  - name: "Formula Drift"
+  - name: "formula drift"
     weight: 1
     excluded_from: 
   - name: "open top"
@@ -126,7 +135,18 @@ variants:  # List of selectable variants with weighting
   - name: "military"
     weight: 3
     excluded_from: A,B,C,D,E,F,S,M
-
+  - name: "polar expedition"
+    weight: 1
+    excluded_from: A,B,C,F,S
+  - name: "kit car"
+    weight: 1
+    excluded_from: A,B,C,D,E,F,M,J
+  - name: "all-terrain"
+    weight: 1
+    excluded_from: A,B,C,D,E,F,M,J
+  - name: "lightweight"
+    weight: 2
+    excluded_from: A,B,E,F,M,J
 
 subsegments:  # Subsegments linked to parent segments
   - name: "micro car"
@@ -150,6 +170,8 @@ subsegments:  # Subsegments linked to parent segments
   - name: "sportscar"
     parent: S
   - name: "coupé"
+    parent: D
+  - name: "roadster"
     parent: S
   - name: "supercar"
     parent: S
@@ -182,11 +204,14 @@ objective_attributes:
   a commercial failure: A,B,C,D,E,F,M,J,S
   a four seater: S
   affordable: A,B,C,D,J,M
+  boasting low end torque: B,C,D,E,F,J,M,S
+  boasting six+ seats: B,C,D,E,F,J,M,S
   capable of towing several tons: J
   cargo capable: C,D,E,F,J,M
   city-focused: A,B,C,J,M
   comfortable: B,C,D,E,F,J,M,S
   compact: A,B,C,M,S
+  complex: A,B,C,D,E,F,J,M,S
   competitively priced: B,C,D,E,F,J,M
   cutting edge: D,E,F,M,J,S
   durable: A,B,C,D,E,J,M
@@ -201,6 +226,7 @@ objective_attributes:
   high displacement: D,E,F,M
   high downforce: S
   high-power: C,D,E,F,J,M,S
+  high-revving: A,B,C,D,E,M,J,S
   innovative: C,D,E,F,J,M
   lightweight: A,B,C,D,E,J,M,S
   low-power: A,B,C,D,E,J,M,S
@@ -210,21 +236,24 @@ objective_attributes:
   one of its kind: M,S
   practical: A,B,C,D,E,F,J,M
   quiet: D,S
-  rear engined: A,B,S
+  rear engined: A,B,C,J,M,S
   relatively compact: D,E,J,M
   silent: C,E,F,M,J
   simple: A,B,C,D,J,M
   spacious: C,D,E,F,J,M
   suitable for winter conditions: C,D,E,F,J
-  technologically advanced: A,B,C,D,E,F,J,M
+  technologically advanced: A,B,C,D,E,F,J,M 
+  forced induction: A,B,C,D,E,F,J,M,S
   uncompromised: A,F,J
+  unconventional: A,B,C,D,E,F,J,M,S
+  unsafe at any speed: A,B,C,M,J,F
   versatile: A,B,C,D,E,F,J,M,S
 subjective_attributes:
   a bit of a deathtrap: B,C,D,J,S
   a bit of a shitbox: B,C,J
-  a car of the people: B,C
+  a car of the people: B,C,D,J
   a commercial failure: A,B,C,D,E,F,J,M,S
-  a deathtrap: A,B,S
+  a deathtrap: A,B,S,J
   a farmer's favourite: J
   a fashion statement: C,E,F,J,S
   a maintenance nightmare: B,C,D,E
@@ -232,28 +261,34 @@ subjective_attributes:
   a popular choice with hipsters: A,B,C,D,E,J,M,S
   a product of communism: A,B,C,D,E,J,M,S
   a shitbox: A,B,C,D,J,M
-  a symbol of status: F,J,S
-  a true driver's car: C,D,E,J,S
+  a symbol of status: F,J,S,M
+  a true driver's car: B,C,D,E,J,S
   a wolf in sheep's clothing: B,C,D
   adventurous: A,C,J,M
   ambitious, but rubbish: A,B,C,D,E,F,J,M,S
+  avantgarde: A,B,C,D,E,F,J,M,S
   banned in 22 US states: S
   beloved by enthusiasts: A,B,C,D,E,J,S
   considered the class benchmark: B,C,D,E,F,J,M,S
   better than its reputation: B,C,D
   bold: A,B,C,D,E,F,J,M,S
-  boring: C,D
+  bland: B,C,D,E,J,M
   built by a man in a shed: S
   chic: A,B,C,D,E,F,J,M,S
+  constantly plotting new and exciting ways to phsysically harm you: A,B,S
   cutting edge: M
   designed for seniors: C,D,E,M
   designed to stand out: E,F,J,M,S
-  divisive: J
+  devoid of joy: E,F,J,M,S
+  distinctively french: A,B,C,D,E,F,J,M,S
+  divisive: J,M,F,S
   driver-focused: A,B,C,D,E,F,J,M,S
   dynamic: A,B,C,D,E,F,J,M
   elegant: A,B,C,D,E,F,J,M,S
   elite: E,F,J,M,S
   exclusive: E,F,J,M,S
+  exciting to drive: A,B,C,D,E,F,J,M,S  
+  fun to drive: A,B,C,D,E,F,J,M,S
   executive: D,E,F,J,M
   famous for its unique, but troublesome powertrain: A,B,D,E,F,J,M,S,S
   famously unreliable: A,B,C,D,E,F,J,M,S
@@ -269,17 +304,19 @@ subjective_attributes:
   inspired by the fighter jets of its time: D,E,F,J,M,S
   known for being able to outrun any police car of its time: D,E
   majestic: E,F,J,M
+  made by old men in oily workshops with lathes and drills and unfortunate industrial injuries: S,J
+  made to go racing, only for the rules to change at the last minute, leaving it with nowhere to race: S
   modern: A,B,C,D,E,F,J,M,S
   named in honour of the company's founder: S
-  old fashioned: B,E
+  old fashioned: B,C,D,E,F,J
   old school: S
-  old-fashioned: A,D,F,J,M
   oldfashioned: C
   opulent: F,J,M,S
-  outdated: A
+  pointlessly complicated: A,B,C,D,E,F,J,M,S
   practical: A,B,C,D,E,F,J,M
   prestigious: C,D,E,F,J,M,S
   quirky: A,B,C,D,E,F,J,M
+  quickly developed a terrible reputation: A,B,C,D,E,F,J,M
   refined: B,C,D,E,F,J,M,S
   retro-styled: A,B,C,D,E,F,J,M,S
   rugged: A,B,C,D,J,M
@@ -294,12 +331,14 @@ subjective_attributes:
   suitable for winter conditions: C,D,E,F,M,S
   streamlined: D,E,F,M,S
   the most stolen vehicle in the UK: A,B,C,D,E,F,J,M,S
+  the answer to a question noone asked: A,B,C,D,E,F,J,M,S
   timeless: A,B,C,D,E,F,J,S
   understated: A,C,D,E,F,J,M,S
   unorthodox: E,M,S,S
   urban: A,B,C,D,F,J,M
   vibrant: A,B,C,D,F,J,M,S
   was later found to violate various emission regulations: A,B,C,D,E,F,J,M,S
+  was already outdated when it entered production: A,B,C,D,E,F,J,M,S
   wedge-shaped: S
   widely known as the car that doomed the company: B,C,D,E,F,J,M,S
   widely known as the car that saved the company: A,B,C,D,E,J,M
